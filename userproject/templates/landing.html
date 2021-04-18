@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logged in user</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+    welcome {{request.user}}
+    <p>some decription sbout the website . a little detailed description to make it look like paragraph so that hte user can read and have a basic understanding of the website.</p>
+    <a href="/logout">Logout</a>
+    
+</body>
+</html> {% endcomment %}
+
+
+
+
+
+{% block title %}Logged in user{% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid px-0">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/two.jfif" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/three.jfif" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/one.jfif" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<div class="container marketing py-4">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row py-4">
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="/static/add_user.jfif" class="d-block w-100" alt="...">
+        <h2>Add New Customer</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <p><a class="btn btn-secondary" href="/addUser">ADD »</a></p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="/static/add_medicine.jfif" class="d-block w-100" alt="...">
+        <h2>Add New Medicine</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <p><a class="btn btn-secondary" href="/addMedicine">ADD »</a></p>
+      </div><!-- /.col-lg-4 -->
+
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="/static/medicineExpiration.jfif" class="d-block w-100" alt="...">
+        <h2>Medicine Expiration Info</h2>
+        <p>And lastly this, the third column of representative placeholder content.</p>
+        <p><a class="btn btn-secondary" href="/medicineExpirationInfo">VIEW »</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <div class="row py-4">
+      <div class="col-lg-4">
+        <!--<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>-->
+        <img class="rounded-circle" src="/static/newBill.jfif" class="d-block w-100" alt="...">
+        <h2>Generate New Bill</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <p><a class="btn btn-secondary" href="/generateNewBill">GENERATE »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="/static/bill.jfif" class="d-block w-100" alt="...">
+        <h2>Generate Previous Bill</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <p><a class="btn btn-secondary" href="/generatePreviousBill">GENERATE »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="/static/medicineHistory.jfif" class="d-block w-100" alt="...">
+        <h2>View Medicine History</h2>
+        <p>And lastly this, the third column of representative placeholder content.</p>
+        <p><a class="btn btn-secondary" href="/viewMedicineHistory">VIEW »</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div>
+    <div class="row py-4">
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="/static/customerHistory.jfif" class="d-block w-100" alt="...">
+        <h2>View Customer History</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <p><a class="btn btn-secondary" href="/viewCustomerHistory">VIEW »</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div>
+
+  </div>
+
+{% endblock body %}
+

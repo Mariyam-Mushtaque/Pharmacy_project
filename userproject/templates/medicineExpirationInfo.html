@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Medicine Expiration Details{% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid px-0">
+<img src="/static/addNewUser.jfif" class="d-block w-100" alt="...">
+</div>
+<div class="container">
+    <h1 class="text-center py-3">Medicine Expiration Details</h1>
+</div>
+<div class="container my-4">
+    <table class="table ">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Medicine Name</th>
+                <th>Batch</th>
+                <th>Manufacture</th>
+                <th>Price</th>
+                <th>Date of expiry</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in expiringmedicines %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.batch}}</td>
+                    <td>{{i.manufacture}}</td>
+                    <td>{{i.price}}</td>
+                    <td>{{i.date}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock body %}
